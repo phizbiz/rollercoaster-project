@@ -26,7 +26,7 @@ app.get('/regions', async (req, res) => {
   res.json(allRegions)
 })
 
-// read all foods by region --> GET
+// read all coasters by region --> GET
 app.get('/region/:id', async (req, res) => {
   const rollercoasterRegion = await Rollercoaster.find({
     region: req.params.id
