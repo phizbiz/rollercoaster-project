@@ -50,6 +50,10 @@ Next Steps:
 
 ![CHD](./images/Roller%20Coaster%20Component%20Hierarchy%20Diagram.jpg)
 
+## Wireframe
+
+![Wireframe](./images/Roller%20Coaster%20Wireframe.png)
+
 ## Links
 
 Popular Rollercoasters in the US: [link](https://blooloop.com/theme-park/opinion/top-coasters-usa/)
