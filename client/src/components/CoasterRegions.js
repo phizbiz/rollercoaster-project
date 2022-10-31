@@ -52,7 +52,7 @@ const CoasterRegions = () => {
             }}
           >
             <h2>{coaster.name}</h2>
-            <img src={coaster.url} alt={coaster.name} className="img" />
+            <img src={coaster.image} alt={coaster.name} className="img" />
           </div>
         ))}
       </section>
