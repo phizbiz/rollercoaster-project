@@ -15,7 +15,7 @@ const CoasterRegions = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`region/${id}`)
+      let response = await axios.get(`http://localhost:3001/region/${id}`)
       setCoaster(response.data)
     }
     apiCall()
@@ -23,7 +23,7 @@ const CoasterRegions = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`regions/${id}`)
+      let response = await axios.get(`http://localhost:3001/regions/${id}`)
       setRegion(response.data)
     }
     apiCall()
@@ -37,7 +37,7 @@ const CoasterRegions = () => {
           <Link to="/">
             <em>Home</em>
           </Link>
-          <Link to="/foods">
+          <Link to="/allcoasters">
             <em>All Coasters</em>
           </Link>
         </nav>

@@ -48,19 +48,19 @@ app.post('/regions', async (req, res) => {
 
 // ROLLERCOASTER
 
-// read all foods --> GET
+// read all rollercoasters --> GET
 app.get('/rollercoasters', async (req, res) => {
   const allRollercoasters = await Rollercoaster.find({})
   res.json(allRollercoasters)
 })
 
-// create food --> POST
+// create rollercoasters --> POST
 app.post('/rollercoasters', async (req, res) => {
   let createdRollercoaster = await Rollercoaster.create(req.body)
   res.json(createdRollercoaster)
 })
 
-// read one food --> GET
+// read one rollercoaster --> GET
 app.get('/rollercoasters/:id', async (req, res) => {
   let foundRollercoaster = await Rollercoaster.findById(req.params.id).populate(
     'region'
@@ -69,7 +69,7 @@ app.get('/rollercoasters/:id', async (req, res) => {
   res.json(foundRollercoaster)
 })
 
-// delete one food --> DELETE
+// delete one rollercoaster --> DELETE
 app.delete('/rollercoasters/:id', async (req, res) => {
   let deletedRollercoaster = await Rollercoaster.findByIdAndDelete(
     req.params.id
