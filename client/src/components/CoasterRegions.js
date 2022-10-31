@@ -37,7 +37,7 @@ const CoasterRegions = () => {
           <Link to="/">
             <em>Home</em>
           </Link>
-          <Link to="/foods">
+          <Link to="/allcoasters">
             <em>All Coasters</em>
           </Link>
         </nav>
