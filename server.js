@@ -18,6 +18,8 @@ app.use(cors())
 
 //ROUTES
 
+//REGIONS
+
 // read all regions --> GET
 app.get('/regions', async (req, res) => {
   let allRegions = await Region.find({})
