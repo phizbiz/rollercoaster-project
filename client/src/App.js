@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import Nav from './components/Nav'
+import AllCoasters from './components/AllCoasters'
+import CoasterRegions from './components/CoasterRegions'
+import Details from './components/Details'
+import Home from './components/Home'
+import NewCoasterForm from './components/NewCoasterForm'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Nav />
       </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/allcoasters" element={<AllCoasters />} />
+          <Route path="/:id" element={<CoasterRegions />} />
+          <Route path="/coaster/:id" element={<Details />} />
+          <Route path="/newcoasterform" element={<NewCoasterForm />} />
+        </Routes>
+      </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
