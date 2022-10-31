@@ -1,0 +1,23 @@
+{
+  "name": "rollercoaster-project",
+  "version": "1.0.0",
+  "description": "October 31, 2022 By: Philip Basnight, Christopher Yeom, Max Calabro, Mohamed Osman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phizbiz/rollercoaster-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phizbiz/rollercoaster-project/issues"
+  },
+  "homepage": "https://github.com/phizbiz/rollercoaster-project#readme",
+  "dependencies": {
+    "mongoose": "^6.7.0"
+  }
+}
