@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const CoasterRegions = () => {
@@ -31,17 +30,9 @@ const CoasterRegions = () => {
 
   return (
     <div>
-      <header>
+      <nav>
         <h2 className="region-title">{region.name}</h2>
-        <nav className="navbar">
-          <Link to="/">
-            <em>Home</em>
-          </Link>
-          <Link to="/allcoasters">
-            <em>All Coasters</em>
-          </Link>
-        </nav>
-      </header>
+      </nav>
       <section className="container-grid">
         {coasters.map((coaster) => (
           <div
