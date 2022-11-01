@@ -20,4 +20,10 @@
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+.img {
+  max-width: 500px;
+  max-height: 500px;
 }
