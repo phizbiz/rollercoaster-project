@@ -9,7 +9,7 @@ const CoasterRegions = () => {
   let navigate = useNavigate()
 
   const viewCoaster = (details) => {
-    navigate(`${details}`)
+    navigate(`/coaster/${details}`)
   }
 
   useEffect(() => {
