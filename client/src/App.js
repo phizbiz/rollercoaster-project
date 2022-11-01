@@ -11,14 +11,16 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <header>{/* <Nav /> */}</header>
+      <header>
+        <Nav />
+      </header>
       <main>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
-          {/* <Route path="/allcoasters" element={<AllCoasters />} /> */}
-          {/* <Route path="/:id" element={<CoasterRegions />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/allcoasters" element={<AllCoasters />} />
+          <Route path="/:id" element={<CoasterRegions />} />
           <Route path="/coaster/:id" element={<Details />} />
-          {/* <Route path="/newcoasterform" element={<NewCoasterForm />} /> */}
+          <Route path="/newcoasterform" element={<NewCoasterForm />} />
         </Routes>
       </main>
     </div>
