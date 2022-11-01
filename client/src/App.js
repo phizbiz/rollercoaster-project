@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Nav />{' '}
+        <Nav />
       </header>
       <main>
         <Routes>

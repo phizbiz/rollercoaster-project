@@ -62,7 +62,6 @@ const NewCoasterForm = () => {
         <label htmlFor="image">Image:</label>
         <input id="image" value={formState.image} onChange={handleChange} />
         <select id="region" onChange={handleChange}>
-          <option>Region</option>
           {regions.map((regionCoaster) => (
             <option value={regionCoaster._id} key={regionCoaster._id}>
               {regionCoaster.name}
