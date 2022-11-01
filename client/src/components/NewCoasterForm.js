@@ -72,7 +72,7 @@ const NewCoasterForm = () => {
         <button type="submit">Add Rollercoaster</button>
       </form>
       <h1>Rollercoasters</h1>
-      <div>
+      <div className="container-grid">
         {coasters.map((coaster) => (
           <div key={coaster._id}>
             <h3>
