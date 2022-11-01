@@ -8,7 +8,8 @@ const NewCoasterForm = () => {
   const [formState, setFormState] = useState({
     name: '',
     description: '',
-    image: ''
+    image: '',
+    region: '1'
   })
 
   useEffect(() => {
@@ -34,7 +35,6 @@ const NewCoasterForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
     let newCoaster = await axios
       .post('http://localhost:3001/rollercoasters', formState)
       .then((response) => {
@@ -62,6 +62,9 @@ const NewCoasterForm = () => {
         <label htmlFor="image">Image:</label>
         <input id="image" value={formState.image} onChange={handleChange} />
         <select id="region" onChange={handleChange}>
+          <option value="1" placeholder="select">
+            Select
+          </option>
           {regions.map((regionCoaster) => (
             <option value={regionCoaster._id} key={regionCoaster._id}>
               {regionCoaster.name}
