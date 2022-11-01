@@ -76,7 +76,7 @@ const NewCoasterForm = () => {
         {coasters.map((coaster) => (
           <div key={coaster._id}>
             <h3>
-              <img src={coaster.image} />
+              <img src={coaster.image} className="img" />
             </h3>
             <h2>Rollercoaster: {coaster.name}</h2>
             <h3>Description: {coaster.description}</h3>
