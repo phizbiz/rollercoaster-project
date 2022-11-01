@@ -1,7 +1,5 @@
 import './App.css'
 import React from 'react'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
 import Nav from './components/Nav'
 import AllCoasters from './components/AllCoasters'
 import CoasterRegions from './components/CoasterRegions'
