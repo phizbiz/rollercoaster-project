@@ -11,9 +11,7 @@ import { Route, Routes } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <header>
-        <Nav />
-      </header>
+      <header>{/* <Nav /> */} </header>
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
