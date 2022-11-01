@@ -24,7 +24,6 @@ const Details = () => {
 
   return (
     <div>
-      <h1>hi</h1>
       <div>
         <div>{rollerCoasterState.name}</div>
         <p>{rollerCoasterState.description}</p>
