@@ -27,7 +27,11 @@ const Details = () => {
       <div className="details">
         <h2>{rollerCoasterState.region.name}</h2>
         <h1>{rollerCoasterState.name}</h1>
-        <img src={rollerCoasterState.image} alt={rollerCoasterState.name}></img>
+        <img
+          src={rollerCoasterState.image}
+          alt={rollerCoasterState.name}
+          className="img"
+        ></img>
         <p>{rollerCoasterState.description}</p>
       </div>
     </div>
