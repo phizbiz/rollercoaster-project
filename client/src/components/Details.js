@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const Details = () => {
+  let { id } = useParams()
   const [rollerCoasterState, setRollerCoasterState] = useState({
     name: '',
     description: '',
@@ -12,7 +14,7 @@ const Details = () => {
   useEffect(() => {
     const getRollerCoaster = async () => {
       let response = await axios.get(
-        `http://localhost:3001/rollercoasters/63602324748ed7efbc0b29da`
+        `http://localhost:3001/rollercoasters/${id}`
       )
       setRollerCoasterState(response.data)
       console.log(response.data)
