@@ -74,7 +74,7 @@ const NewCoasterForm = () => {
       <h1>Rollercoasters</h1>
       <div className="container-grid">
         {coasters.map((coaster) => (
-          <div key={coaster._id}>
+          <div key={coaster._id} className="box">
             <h3>
               <img src={coaster.image} className="img" />
             </h3>

@@ -24,11 +24,11 @@ const Details = () => {
 
   return (
     <div>
-      <div>
+      <div className="details">
         <h2>{rollerCoasterState.region.name}</h2>
         <h1>{rollerCoasterState.name}</h1>
-        <p>{rollerCoasterState.description}</p>
         <img src={rollerCoasterState.image} alt={rollerCoasterState.name}></img>
+        <p>{rollerCoasterState.description}</p>
       </div>
     </div>
   )
