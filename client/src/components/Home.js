@@ -16,16 +16,18 @@ const Home = () => {
   return (
     <div className="allRegions">
       <h1>Choose a Region:</h1>
-      {regions.map((region) => {
-        return (
-          <Link to={`/${region._id}`}>
-            <div className="region" key={region._id}>
-              <h2>{region.name}</h2>
-              <img src={region.image} className="img" />
-            </div>
-          </Link>
-        )
-      })}
+      <div className="divide">
+        {regions.map((region) => {
+          return (
+            <Link to={`/${region._id}`}>
+              <div className="region" key={region._id}>
+                <h2>{region.name}</h2>
+                <img src={region.image} className="img" />
+              </div>
+            </Link>
+          )
+        })}
+      </div>
     </div>
   )
 }
