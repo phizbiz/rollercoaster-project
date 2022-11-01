@@ -20,8 +20,8 @@ const Home = () => {
         return (
           <Link to={`/${region._id}`}>
             <div className="region" key={region._id}>
-              <img src={region.image} />
               <h2>{region.name}</h2>
+              <img src={region.image} className="img" />
             </div>
           </Link>
         )

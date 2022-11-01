@@ -71,11 +71,11 @@ const NewCoasterForm = () => {
         <button type="submit">Add Rollercoaster</button>
       </form>
       <h1>Rollercoasters</h1>
-      <div>
+      <div className="container-grid">
         {coasters.map((coaster) => (
-          <div key={coaster._id}>
+          <div key={coaster._id} className="box">
             <h3>
-              <img src={coaster.image} />
+              <img src={coaster.image} className="img" />
             </h3>
             <h2>Rollercoaster: {coaster.name}</h2>
             <h3>Description: {coaster.description}</h3>
