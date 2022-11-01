@@ -4,6 +4,7 @@ import link from 'react-router-dom'
 
 const NewCoasterForm = () => {
   const [coasters, updateCoasters] = useState([])
+  const [regions, updateRegion] = useState([])
   const [formState, setFormState] = useState({
     name: '',
     description: '',
@@ -14,6 +15,15 @@ const NewCoasterForm = () => {
     const apiCall = async () => {
       let response = await axios.get('http://localhost:3001/rollercoasters')
       updateCoasters(response.data)
+      console.log(response.data)
+    }
+    apiCall()
+  }, [])
+
+  useEffect(() => {
+    const apiCall = async () => {
+      let response = await axios.get('http://localhost:3001/regions')
+      updateRegion(response.data)
     }
     apiCall()
   }, [])
@@ -51,6 +61,14 @@ const NewCoasterForm = () => {
         />
         <label htmlFor="image">Image:</label>
         <input id="image" value={formState.image} onChange={handleChange} />
+        <select id="region" onChange={handleChange}>
+          <option>Region</option>
+          {regions.map((regionCoaster) => (
+            <option value={regionCoaster._id} key={regionCoaster._id}>
+              {regionCoaster.name}
+            </option>
+          ))}
+        </select>
         <button type="submit">Add Rollercoaster</button>
       </form>
       <h1>Rollercoasters</h1>
@@ -58,12 +76,13 @@ const NewCoasterForm = () => {
         {coasters.map((coaster) => (
           <div key={coaster._id}>
             <h3>
-              <img src={coaster.image} style={{ maxWidth: '200px' }} />
+              <img src={coaster.image} />
             </h3>
             <h2>Rollercoaster: {coaster.name}</h2>
-            <h3>Artist: {coaster.description}</h3>
+            <h3>Description: {coaster.description}</h3>
           </div>
         ))}
+        <div></div>
       </div>
     </div>
   )

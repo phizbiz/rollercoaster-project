@@ -50,7 +50,7 @@ app.post('/regions', async (req, res) => {
 
 // read all foods --> GET
 app.get('/rollercoasters', async (req, res) => {
-  const allRollercoasters = await Rollercoaster.find({})
+  const allRollercoasters = await Rollercoaster.find({}).populate('region')
   res.json(allRollercoasters)
 })
 
