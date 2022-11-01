@@ -25,10 +25,10 @@ const Details = () => {
   return (
     <div>
       <div>
-        <div>{rollerCoasterState.name}</div>
+        <h2>{rollerCoasterState.region.name}</h2>
+        <h1>{rollerCoasterState.name}</h1>
         <p>{rollerCoasterState.description}</p>
         <img src={rollerCoasterState.image} alt={rollerCoasterState.name}></img>
-        <div>{rollerCoasterState.region.name}</div>
       </div>
     </div>
   )
