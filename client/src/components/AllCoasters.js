@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const AllCoasters = () => {
@@ -18,9 +17,6 @@ const AllCoasters = () => {
     <div>
       <header>
         <h1 className="nav-title">Rollercoasters</h1>
-        <nav className="navbar">
-          <Link to="/">Home</Link>
-        </nav>
       </header>
       <section className="container-grid">
         {coasters.map((coaster) => (
