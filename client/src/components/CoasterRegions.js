@@ -22,7 +22,7 @@ const CoasterRegions = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/regions/${id}`)
+      let response = await axios.get(`/regions/${id}`)
       setRegion(response.data)
     }
     apiCall()
