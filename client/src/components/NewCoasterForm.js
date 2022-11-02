@@ -14,7 +14,7 @@ const NewCoasterForm = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/rollercoasters')
+      let response = await axios.get('/rollercoasters')
       updateCoasters(response.data)
       console.log(response.data)
     }
@@ -23,7 +23,7 @@ const NewCoasterForm = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get('http://localhost:3001/regions')
+      let response = await axios.get('/regions')
       updateRegion(response.data)
     }
     apiCall()
@@ -36,7 +36,7 @@ const NewCoasterForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     let newCoaster = await axios
-      .post('http://localhost:3001/rollercoasters', formState)
+      .post('/rollercoasters', formState)
       .then((response) => {
         return response
       })

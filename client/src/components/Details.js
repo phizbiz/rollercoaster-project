@@ -15,9 +15,7 @@ const Details = () => {
 
   useEffect(() => {
     const getRollerCoaster = async () => {
-      let response = await axios.get(
-        `http://localhost:3001/rollercoasters/${id}`
-      )
+      let response = await axios.get(`/rollercoasters/${id}`)
       setRollerCoasterState(response.data)
       console.log(response.data)
     }
@@ -26,9 +24,7 @@ const Details = () => {
 
   const handleDelete = async (event) => {
     event.preventDefault()
-    let deleteCoaster = await axios.delete(
-      `http://localhost:3001/rollercoasters/${id}`
-    )
+    let deleteCoaster = await axios.delete(`/rollercoasters/${id}`)
     navigate(-1)
   }
 

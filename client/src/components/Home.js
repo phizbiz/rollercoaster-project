@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const api = async () => {
-      let response = await axios.get('http://localhost:3001/regions')
+      let response = await axios.get('/regions')
       updateRegions(response.data)
     }
     api()

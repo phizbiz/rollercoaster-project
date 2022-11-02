@@ -6,7 +6,7 @@ const AllCoasters = () => {
 
   useEffect(() => {
     const apiCall = async () => {
-      let response = await axios.get(`http://localhost:3001/rollercoasters`)
+      let response = await axios.get(`/rollercoasters`)
       updateCoasters(response.data)
     }
 
